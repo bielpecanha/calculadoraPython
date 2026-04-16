@@ -15,7 +15,10 @@ if tipo_calculadora == 'Simples' or tipo_calculadora == 'simples':
         result = num1 - num2 
 
     elif operacao_simples == '/':
-        result = num1 / num2 
+        if num2 == 0:
+            print('ERRO: valor inválido para divisão por zero.')
+        else:
+            result = num1 / num2 
 
     elif operacao_simples == 'x':
         result = num1 * num2 
@@ -23,8 +26,6 @@ if tipo_calculadora == 'Simples' or tipo_calculadora == 'simples':
     print(f'{num1:.0f} {operacao_simples} {num2:.0f} = {result:.0f}')
 
 elif tipo_calculadora == 'Científica' or tipo_calculadora == 'científica' or tipo_calculadora == 'cientifica' or tipo_calculadora == 'Cientifica':
-    
-    #num1_graus = math.radians(num1)
 
     operacao_cientifica = str(input('Qual operação deseja fazer? (Sen, Cos, Tan, Log, Exp): '))
 
